@@ -1,3 +1,8 @@
+" Set colorscheme
+colorscheme gruvbox
+" Set dark background
+set background=dark
+
 " NERDTree
 nnoremap <A-s> :NERDTreeFind<CR>
 let NERDTreeShowHidden=1

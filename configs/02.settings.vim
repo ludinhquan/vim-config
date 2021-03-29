@@ -21,7 +21,7 @@ set autowrite
 let mapleader="\<Space>"
 
 " General
-nnoremap zz :w<CR>
+nnoremap <Leader>w :w<CR>
 nnoremap rr :source %<CR>
 inoremap jk <ESC> 
 
