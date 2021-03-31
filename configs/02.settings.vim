@@ -26,12 +26,12 @@ nnoremap rr :source %<CR>
 inoremap jk <ESC> 
 
 " Unmap key
-inoremap <Esc> <nop>
+"inoremap <Esc> <nop>
+nnoremap <ESC><ESC> :nohlsearch<CR>
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
-nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " Switch window
 nnoremap <C-\> :vsplit<CR>
