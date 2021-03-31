@@ -24,7 +24,7 @@ nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree 
+autocmd VimEnter * NERDTree | wincmd p | q
 
 " crtlp
 let g:ctrlp_custom_ignore = {
