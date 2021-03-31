@@ -18,5 +18,6 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'neoclide/coc-eslint',
   Plug 'neoclide/coc-prettier',
   Plug 'terryma/vim-multiple-cursors'
+  Plug 'terryma/vim-expand-region'
 
 call plug#end()

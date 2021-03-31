@@ -84,3 +84,5 @@ nnoremap <A-k>    :resize +2<CR>
 nnoremap <A-h>    :vertical resize -2<CR>
 nnoremap <A-l>    :vertical resize +2<CR>
 
+" Source nvim
+nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>

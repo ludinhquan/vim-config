@@ -1,10 +1,19 @@
-let mapleader="\<Space>"
-
 " Set colorscheme
 colorscheme gruvbox
 " Set dark background
 set background=dark
 
+" Expand region
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink) 
+call expand_region#custom_text_objects({
+  \ "\/\\n\\n\<CR>": 1, 
+  \ 'a]' :1, 
+  \ 'ab' :1,
+  \ 'aB' :1, 
+  \ 'ii' :0,
+  \ 'ai' :0
+  \ })
 " NERDTree
 nnoremap <A-s> :NERDTreeFind<CR>
 nnoremap <Leader>s :NERDTreeToggle<CR>
@@ -35,7 +44,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-nnoremap <silent> gs :call CocAction('jumpDefinition', 'split')<CR>
+nnoremap <silent> gs :call CocAction('jumpDefinition', 'drop')<CR>
 nnoremap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
 nnoremap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>kj
 
