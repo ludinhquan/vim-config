@@ -38,6 +38,7 @@ set autowrite
 
 " General
 nnoremap <C-s> :w<CR>
+inoremap <C-s> <ESC>:w<CR>li
 nnoremap rr :source %<CR>
 inoremap jk <ESC> 
 inoremap kj <ESC> 
@@ -86,3 +87,10 @@ nnoremap <A-l>    :vertical resize +2<CR>
 
 " Source nvim
 nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>
+
+" Insert new line
+nnoremap <CR> o<ESC>
+
+" Backspace
+inoremap <C-BS> <C-\><C-o>db
+nnoremap <BS> li<BS>

@@ -16,7 +16,7 @@ call expand_region#custom_text_objects({
   \ })
 " NERDTree
 nnoremap <A-s> :NERDTreeFind<CR>
-nnoremap <Leader>s :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " NERDComment
