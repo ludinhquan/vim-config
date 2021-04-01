@@ -62,7 +62,6 @@ nnoremap <c-l> viwu<ESC>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
-" SHIFT-TAB will go to bac
 nnoremap <S-TAB> :bprevious<CR>
 
 " Switch window
@@ -79,14 +78,8 @@ nnoremap <C-j> <C-d>
 vnoremap < <gv
 vnoremap > >gv
 
-" Use alt + hjkl to resize windows
-nnoremap <A-j>    :resize -2<CR>
-nnoremap <A-k>    :resize +2<CR>
-nnoremap <A-h>    :vertical resize -2<CR>
-nnoremap <A-l>    :vertical resize +2<CR>
-
 " Source nvim
-nnoremap <Leader>sv :source ~/.config/nvim/init.vim<CR>
+nnoremap <Leader><Leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Insert new line
 nnoremap <CR> o<ESC>
@@ -94,3 +87,11 @@ nnoremap <CR> o<ESC>
 " Backspace
 inoremap <C-BS> <C-\><C-o>db
 nnoremap <BS> li<BS>
+
+" Terminal 
+tnoremap jk <C-\><C-n>
+tnoremap kj <C-\><C-n>
+tnoremap <C-S-W> <C-\><C-n>:q<CR>
+nnoremap <C-S-B> :tabnew<CR>:terminal<CR>:set nonu<CR>i
+nnoremap <Leader>j :tabprevious<CR>
+nnoremap <Leader>k :tabnext<CR>

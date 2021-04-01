@@ -48,5 +48,5 @@ function! FloatTerm(...)
   autocmd TermClose * ++once :bd! | call nvim_win_close(s:float_term_border_win, v:true)
 endfunction
 " Open terminal
-nnoremap <Leader>at :call FloatTerm()<CR>
+nnoremap <Leader><Leader>t :call FloatTerm()<CR>
 

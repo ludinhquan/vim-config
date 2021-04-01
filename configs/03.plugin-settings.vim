@@ -16,7 +16,7 @@ call expand_region#custom_text_objects({
   \ })
 " NERDTree
 nnoremap <A-s> :NERDTreeFind<CR>
-nnoremap <Leader>f :NERDTreeToggle<CR>
+nnoremap mm :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " NERDComment
@@ -24,7 +24,7 @@ nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p | q
+" autocmd VimEnter * NERDTree 
 
 " Coc config
 let g:coc_global_extensions = [
@@ -66,5 +66,3 @@ nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
-" Tagbar
-nnoremap <A-z> :TagbarToggle<CR>
