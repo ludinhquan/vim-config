@@ -10,7 +10,6 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'morhetz/gruvbox'
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
-  Plug 'kien/ctrlp.vim'
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
@@ -19,5 +18,7 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'neoclide/coc-prettier',
   Plug 'terryma/vim-multiple-cursors'
   Plug 'terryma/vim-expand-region'
-
+  Plug 'junegunn/fzf.vim'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'preservim/tagbar'
 call plug#end()
