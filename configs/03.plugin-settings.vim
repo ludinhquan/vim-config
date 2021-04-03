@@ -20,11 +20,11 @@ nnoremap mm :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " NERDComment
-nmap <C-_>   <Plug>NERDCommenterToggle
-vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle
 
 " Start NERDTree and put the cursor back in the other window.
-" autocmd VimEnter * NERDTree 
+autocmd VimEnter * if argc() >= 0 | NERDTree | wincmd p | q 
 
 " Coc config
 let g:coc_global_extensions = [

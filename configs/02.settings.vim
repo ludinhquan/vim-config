@@ -40,11 +40,12 @@ set autowrite
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>li
 nnoremap rr :source %<CR>
-inoremap jk <ESC> 
-inoremap kj <ESC> 
+inoremap jk <ESC>
+inoremap kj <ESC>
 
-" Use control-c instead of escape
-nnoremap <C-c> <Esc>
+" Delete all line selected
+nnoremap <C-x> Vx
+xnoremap <C-k> Vx
 
 " Unmap key
 "inoremap <Esc> <nop>
@@ -57,8 +58,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 " Easy CAPS
 inoremap <c-u> <ESC>viwUi
 inoremap <c-l> <ESC>viwui
-nnoremap <c-u> viwU<ESC>
-nnoremap <c-l> viwu<ESC>
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -71,8 +70,8 @@ inoremap <C-\> <Esc>:vsplit<CR>
 nnoremap <A-q> <C-w><C-w>
 
 " Remap scrolling
-nnoremap <C-k> <C-u>
-nnoremap <C-j> <C-d>
+"nnoremap <C-k> <C-u>
+"nnoremap <C-j> <C-d>
 
 " Better tabbing
 vnoremap < <gv
@@ -82,7 +81,7 @@ vnoremap > >gv
 nnoremap <Leader><Leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Insert new line
-nnoremap <CR> o<ESC>
+nnoremap <CR> A<CR>
 
 " Backspace
 inoremap <C-BS> <C-\><C-o>db
@@ -91,7 +90,6 @@ nnoremap <BS> li<BS>
 " Terminal 
 tnoremap jk <C-\><C-n>
 tnoremap kj <C-\><C-n>
-tnoremap <C-S-W> <C-\><C-n>:q<CR>
 nnoremap <C-S-B> :tabnew<CR>:terminal<CR>:set nonu<CR>i
 nnoremap <Leader>j :tabprevious<CR>
 nnoremap <Leader>k :tabnext<CR>
