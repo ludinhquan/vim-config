@@ -24,7 +24,7 @@ nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * if argc() >= 0 | NERDTree | wincmd p | q 
+autocmd VimEnter * NERDTree
 
 " Coc config
 let g:coc_global_extensions = [
@@ -55,6 +55,14 @@ let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
 " FZF
+let g:fzf_layout = { 'window': {
+      \ 'width': 0.9,
+      \ 'height': 0.7,
+      \ 'highlight': 'Comment',
+      \ 'rounded': v:false } }
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-f> :BLines<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
