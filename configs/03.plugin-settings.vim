@@ -23,8 +23,19 @@ let NERDTreeShowHidden=1
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle
 
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree
+autocmd VimEnter * :call OpenNerdTree()
+
+" Close blank page
+function OpenNerdTree()
+  :NERDTree
+  wincmd p
+  if argc() == 0
+    wincmd q
+  else
+    :NERDTreeFind
+    wincmd p
+  endif
+endfunction
 
 " Coc config
 let g:coc_global_extensions = [
