@@ -8,6 +8,7 @@ endif
 call plug#begin('~/.config/nvim/bundle')
   Plug 'tpope/vim-fugitive'
   Plug 'morhetz/gruvbox'
+  Plug 'mhartington/oceanic-next'
   Plug 'scrooloose/nerdtree'
   Plug 'preservim/nerdcommenter'
   Plug 'pangloss/vim-javascript'
@@ -21,4 +22,8 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'preservim/tagbar'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'tpope/vim-surround'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase'  }
 call plug#end()

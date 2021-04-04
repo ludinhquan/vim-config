@@ -1,11 +1,7 @@
-" Set colorscheme
-colorscheme gruvbox
-" Set dark background
-set background=dark
-
 " Expand region
-map K <Plug>(expand_region_expand)
-map J <Plug>(expand_region_shrink) 
+nnoremap K <Plug>(expand_region_expand)
+nnoremap J <Plug>(expand_region_shrink) 
+
 call expand_region#custom_text_objects({
   \ "\/\\n\\n\<CR>": 1, 
   \ 'a]' :1, 
@@ -14,6 +10,7 @@ call expand_region#custom_text_objects({
   \ 'ii' :0,
   \ 'ai' :0
   \ })
+
 " NERDTree
 nnoremap <A-s> :NERDTreeFind<CR>
 nnoremap mm :NERDTreeToggle<CR>
@@ -44,13 +41,19 @@ let g:coc_global_extensions = [
 let g:coc_snippet_next = '<tab>'
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-nnoremap <silent> gs :call CocAction('jumpDefinition', 'drop')<CR>
-nnoremap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
-nnoremap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>kj
+inoremap <silent><expr> <c-space> coc#refresh()
+"nnoremap <silent> gs :call CocAction('jumpDefinition', 'drop')<CR>
+"nnoremap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
+"nnoremap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>kj
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Multiple cursor
 let g:multi_cursor_use_default_mapping=0
@@ -68,7 +71,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " FZF
 let g:fzf_layout = { 'window': {
       \ 'width': 0.9,
-      \ 'height': 0.7,
+      \ 'height': 0.8,
       \ 'highlight': 'Comment',
       \ 'rounded': v:false } }
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
@@ -85,3 +88,8 @@ nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
+
+
+" Vim color highlighting
+let g:Hexokinase_highlighters = ['virtual']
+let g:Hexokinase_virtualText = '▩'

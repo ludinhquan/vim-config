@@ -1,13 +1,11 @@
 let g:mapleader = "\<Space>"
 
-syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap           
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
 set ruler                               " Show the cursor position all the timej
-set formatoptions-=t
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                        " treat dash separated words as a word text object"
 set nu
@@ -15,7 +13,6 @@ set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set noswapfile
-set t_Co=256                            " Support 256 colors
 set nojoinspaces
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set nobackup                            " This is recommended by coc
@@ -23,7 +20,6 @@ set nowritebackup                       " This is recommended by coc
 set ttimeout
 set ttimeoutlen=10
 set lazyredraw
-set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard^=unnamedplus
 set tabstop=2
 set softtabstop=2
@@ -35,6 +31,14 @@ set autoindent
 set smartindent
 set autoread
 set autowrite
+
+if (has("termguicolors"))
+  "set termguicolors
+endif
+
+" Theme
+syntax enable
+colorscheme OceanicNext
 
 " General
 nnoremap <C-s> :w<CR>
@@ -93,3 +97,5 @@ tnoremap kj <C-\><C-n>
 nnoremap <C-S-B> :tabnew<CR>:terminal<CR>:set nonu<CR>i
 nnoremap <Leader>j :tabprevious<CR>
 nnoremap <Leader>k :tabnext<CR>
+
+
