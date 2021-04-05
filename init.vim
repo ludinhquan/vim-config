@@ -26,7 +26,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plug 'junegunn/fzf.vim'
 Plug 't9md/vim-choosewin'
 Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'kaicataldo/material.vim'
+Plug 'kaicataldo/material.vim', {'branch': 'main'}
 Plug 'Yggdroot/indentLine'
 Plug 'atelierbram/Base2Tone-vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
@@ -119,8 +119,8 @@ vnoremap p "_dP
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-e> <C-o>$
-inoremap <C-a> <C-o>^
-
+inoremap <C-a> <C-jo>^
+inoremap <C-s> <ESC>:w<CR>lr
 " Remap scrolling
 nnoremap <C-k> <C-u>
 nnoremap <C-j> <C-d>
