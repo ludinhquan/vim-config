@@ -119,7 +119,7 @@ vnoremap p "_dP
 inoremap <C-f> <Right>
 inoremap <C-b> <Left>
 inoremap <C-e> <C-o>$
-inoremap <C-a> <C-jo>^
+inoremap <C-a> <C-o>^
 inoremap <C-s> <ESC>:w<CR>lr
 " Remap scrolling
 nnoremap <C-k> <C-u>
@@ -241,8 +241,9 @@ nnoremap <Leader>tc :tabe<CR>
 nnoremap <Leader>tx :tabclose<CR>
 " Jump window
 nmap <Leader>ww <Plug>(choosewin)
-
-" Open terminal
+" Switch window
+nmap <A-q> <C-w>w
+"" Open terminal
 nnoremap <Leader>at :call FloatTerm()<CR>
 " Open tig, yes TIG, A FLOATING TIGGGG!!!!!!
 nnoremap <Leader>ag :call FloatTerm('"tig"')<CR>
@@ -435,20 +436,20 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-i>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
-set termguicolors
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" ret &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Some custom style
-highlight Normal guibg=NONE
-highlight SignColumn guibg=NONE
-highlight EasyMotionTargetDefault guifg=#ffb400
-highlight WildMenu guifg=#87bb7c
-highlight VertSplit guifg=#1f2329 guibg=NONE
-highlight CocInfoSign guifg=#55606d
-highlight LineNr guifg=#454A54
-highlight DiffAdd guibg=NONE
-highlight DiffAdded guibg=NONE
-highlight DiffChange guibg=NONE
-highlight DiffDelete guibg=NONE
-highlight EndOfBuffer guifg=#282c34
+" highlight Normal guibg=NONE
+" highlight SignColumn guibg=NONE
+" highlight EasyMotionTargetDefault guifg=#ffb400
+" highlight WildMenu guifg=#87bb7c
+" highlight VertSplit guifg=#1f2329 guibg=NONE
+" highlight CocInfoSign guifg=#55606d
+" highlight LineNr guifg=#454A54
+" highlight DiffAdd guibg=NONE
+" highlight DiffAdded guibg=NONE
+" highlight DiffChange guibg=NONE
+" highlight DiffDelete guibg=NONE
+" highlight EndOfBuffer guifg=#282c34
