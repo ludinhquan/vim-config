@@ -45,7 +45,7 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 inoremap <silent><expr> <c-space> coc#refresh()
-"nnoremap <silent> gs :call CocAction('jumpDefinition', 'drop')<CR>
+nnoremap <silent> gs :call CocAction('jumpDefinition', 'drop')<CR>
 "nnoremap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
 "nnoremap <silent> gt :call CocAction('jumpDefinition', 'tabe')<CR>kj
 nmap <silent> gd <Plug>(coc-definition)
@@ -89,7 +89,10 @@ nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
 
+" Git Blame
+let g:blamer_enabled = 1
+let g:blamer_delay = 1000
+let g:blamer_show_in_insert_modes = 0
+nnoremap <Leader>gb :BlamerToggle<CR>
+autocmd VimEnter * :BlamerToggle
 
-" Vim color highlighting
-let g:Hexokinase_highlighters = ['virtual']
-let g:Hexokinase_virtualText = '▩'

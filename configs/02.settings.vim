@@ -31,14 +31,15 @@ set autoindent
 set smartindent
 set autoread
 set autowrite
+set relativenumber
 
 if (has("termguicolors"))
-  "set termguicolors
+  set termguicolors
 endif
 
 " Theme
 syntax enable
-colorscheme OceanicNext
+colorscheme gruvbox
 
 " General
 nnoremap <C-s> :w<CR>
@@ -67,15 +68,23 @@ inoremap <c-l> <ESC>viwui
 nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
-" Switch window
+" Split window
 nnoremap <C-\> :vsplit<CR>
 xnoremap <C-\> :vsplit<CR>
 inoremap <C-\> <Esc>:vsplit<CR>
 nnoremap <A-q> <C-w><C-w>
 
 " Remap scrolling
-"nnoremap <C-k> <C-u>
-"nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+nnoremap <C-j> <C-d>
+nnoremap l w
+nnoremap h b
+nnoremap L l
+nnoremap H h
+inoremap <C-f> <C-o>h
+inoremap <C-b> <C-o>l
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>^
 
 " Better tabbing
 vnoremap < <gv
@@ -94,7 +103,6 @@ nnoremap <BS> li<BS>
 " Terminal 
 tnoremap jk <C-\><C-n>
 tnoremap kj <C-\><C-n>
-nnoremap <C-S-B> :tabnew<CR>:terminal<CR>:set nonu<CR>i
 nnoremap <Leader>j :tabprevious<CR>
 nnoremap <Leader>k :tabnext<CR>
 

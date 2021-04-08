@@ -26,4 +26,5 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase'  }
+  Plug 'APZelos/blamer.nvim'
 call plug#end()
