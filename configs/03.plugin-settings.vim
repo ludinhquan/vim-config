@@ -1,16 +1,3 @@
-" Expand region
-nnoremap K <Plug>(expand_region_expand)
-nnoremap J <Plug>(expand_region_shrink) 
-
-call expand_region#custom_text_objects({
-  \ "\/\\n\\n\<CR>": 1, 
-  \ 'a]' :1, 
-  \ 'ab' :1,
-  \ 'aB' :1, 
-  \ 'ii' :0,
-  \ 'ai' :0
-  \ })
-
 " NERDTree
 nnoremap <A-s> :NERDTreeFind<CR>
 nnoremap mm :NERDTreeToggle<CR>
@@ -88,11 +75,9 @@ nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR> 
 
-
 " Git Blame
 let g:blamer_enabled = 1
 let g:blamer_delay = 1000
 let g:blamer_show_in_insert_modes = 0
 nnoremap <Leader>gb :BlamerToggle<CR>
-autocmd VimEnter * :BlamerToggle
 

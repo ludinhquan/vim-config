@@ -48,6 +48,7 @@ nnoremap rr :source %<CR>
 inoremap jk <ESC>
 inoremap kj <ESC>
 
+
 " Delete all line selected
 nnoremap <C-x> Vx
 xnoremap <C-k> Vx
@@ -81,8 +82,8 @@ nnoremap l w
 nnoremap h b
 nnoremap L l
 nnoremap H h
-inoremap <C-f> <C-o>h
-inoremap <C-b> <C-o>l
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 
@@ -99,11 +100,3 @@ nnoremap <CR> A<CR>
 " Backspace
 inoremap <C-BS> <C-\><C-o>db
 nnoremap <BS> li<BS>
-
-" Terminal 
-tnoremap jk <C-\><C-n>
-tnoremap kj <C-\><C-n>
-nnoremap <Leader>j :tabprevious<CR>
-nnoremap <Leader>k :tabnext<CR>
-
-
