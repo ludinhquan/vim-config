@@ -27,6 +27,4 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'APZelos/blamer.nvim'
   Plug 'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
-  Plug 'alvan/vim-closetag'
-  "Plug 'kevinhwang91/rnvimr'
  call plug#end()
