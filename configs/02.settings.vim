@@ -45,9 +45,14 @@ colorscheme gruvbox
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>li
 nnoremap rr :source %<CR>
+nnoremap <Leader>q :q!<CR>
+nnoremap <Leader>qa :qa!<CR>
 inoremap jk <ESC>
 inoremap kj <ESC>
 
+" Move pane
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Delete all line selected
 nnoremap <C-x> Vx
