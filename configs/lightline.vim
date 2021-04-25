@@ -1,6 +1,6 @@
 function! DrawGitBranchInfo()
   let branch = fugitive#head()
-  return len(branch) > 0 ? "🛐🛐🛐 " . branch : ""
+  return len(branch) > 0 ? "🛐🛐 " . branch : ""
 endfunction
 
 function! MyFiletype()
@@ -30,8 +30,8 @@ endfunction
 let g:lightline = {
       \ 'colorscheme': 'onehalfdark',
       \ 'active': {
-      \   'left': [ [], [ 'filename' ] ],
-      \   'right': [ [], ['cocstatus', 'lineinfo', 'icongitbranch'] ]
+      \   'right': [ [], [ 'filename' ] ],
+      \   'left': [ [], ['cocstatus', 'lineinfo', 'icongitbranch'] ]
       \ },
       \ 'inactive': {
       \   'left': [ ['fileicon'], [ 'filename' ] ],
