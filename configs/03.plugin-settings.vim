@@ -42,3 +42,7 @@ let g:blamer_delay = 1000
 let g:blamer_show_in_insert_modes = 0
 nnoremap <Leader>gb :BlamerToggle<CR>
 
+" JS config
+let g:vim_jsx_pretty_colorful_config = 1
+let g:polyglot_disabled = ['jsx', 'tsx', 'js', 'ts']
+let g:vim_jsx_pretty_template_tags = ['html', 'jsx', 'tsx']

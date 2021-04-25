@@ -14,6 +14,8 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'sheerun/vim-polyglot'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'neoclide/coc-eslint',
   Plug 'neoclide/coc-prettier',
@@ -27,4 +29,5 @@ call plug#begin('~/.config/nvim/bundle')
   Plug 'APZelos/blamer.nvim'
   Plug 'francoiscabrol/ranger.vim'
   Plug 'rbgrouleff/bclose.vim'
+  Plug 'itchyny/lightline.vim'
  call plug#end()

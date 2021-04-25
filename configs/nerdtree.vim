@@ -13,6 +13,6 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 " NERDTree remap
-nnoremap <A-s> :NERDTreeFind<CR>
-nnoremap mm :NERDTreeToggle<CR>
+"nnoremap <A-q> :NERDTreeToggle<CR>
+nnoremap <silent><expr> <A-s> winnr()==g:NERDTree.GetWinNum() ? ":NERDTreeClose\<CR>" : ":NERDTreeFind\<CR>"
 
